@@ -1,0 +1,21 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1>Notícias do Elite F.C</h1>
+    <div class="noticia">
+        <h2>Elite F.C é o Campeão da Libertadores 2024!</h2>
+        <img src="{% static 'app/libertadores_taca.jpeg' %}" alt="Elite F.C Campeão da Libertadores 2024" style="width:100%; border-radius: 8px; margin-bottom: 20px;">
+        <p>
+            Em uma final emocionante, o Elite F.C conquistou a Libertadores 2024, vencendo o adversário por 2 a 1 em uma partida cheia de emoção e determinação. 
+            O time, que se destacou durante toda a competição, mostrou sua força ao dominar o jogo e garantir o título inédito. 
+            A torcida foi à loucura ao ver seus heróis levantando o troféu mais cobiçado da América do Sul.
+        </p>
+        <p>
+            O treinador do Elite F.C, orgulhoso de seus jogadores, destacou o trabalho em equipe e a perseverança como os principais fatores para essa conquista histórica. 
+            "Esse título é para a nossa torcida, que nunca deixou de acreditar em nós", afirmou o capitão do time ao erguer o troféu.
+        </p>
+    </div>
+</div>
+{% endblock %}

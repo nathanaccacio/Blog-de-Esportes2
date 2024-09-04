@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1>Sobre o Elite F.C</h1>
+    <div class="estadio-section">
+        <img src="{% static 'app/estadio.jpg' %}" alt="Estádio do Elite F.C" class="estadio-img">
+    </div>
+    <div class="historia-section">
+        <h2>Nossa História</h2>
+        <p>
+            Fundado em 1990, o Elite F.C nasceu do sonho de um grupo de apaixonados por futebol que desejavam criar um time que representasse a comunidade local com dedicação e espírito competitivo. Desde sua criação, o clube passou por diversas fases de crescimento, conquistando títulos regionais e nacionais que solidificaram sua presença no cenário esportivo.
+        </p>
+        <p>
+            Ao longo dos anos, o Elite F.C investiu em infraestrutura, desenvolvendo um estádio moderno e uma academia de jovens talentos que tem revelado grandes jogadores para o mercado nacional e internacional. A paixão pela camisa e o compromisso com a excelência são valores que guiam o clube em sua trajetória, sempre buscando alcançar novos patamares e inspirar seus torcedores.
+        </p>
+        <p>
+            Hoje, o Elite F.C é reconhecido não apenas por suas conquistas esportivas, mas também por seu engajamento social e projetos comunitários que impactam positivamente a vida de milhares de pessoas. Com um futuro promissor, o clube continua sua missão de promover o futebol de qualidade e fortalecer os laços com sua fiel torcida.
+        </p>
+    </div>
+</div>
+{% endblock %}

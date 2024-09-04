@@ -1,0 +1,52 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Lista de Sócios Torcedores</h1>
+
+    <div class="socio-torcedor-list">
+        <table id="socio-table">
+            <tr>
+                <th>Nome</th>
+                <th>Ações</th>
+            </tr>
+            {% for socio in socios %}
+            <tr>
+                <td>{{ socio.nome }}</td>
+                <td>
+                    <button onclick="removeRow(this)">Remover</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <input type="text" id="new-name" placeholder="Digite um novo nome">
+        <button onclick="addName()">Adicionar Nome</button>
+    </div>
+</div>
+
+<script>
+function addName() {
+    var table = document.getElementById("socio-table");
+    var newName = document.getElementById("new-name").value.trim();
+    
+    if (newName) {
+        var newRow = table.insertRow();
+        var nameCell = newRow.insertCell(0);
+        var actionCell = newRow.insertCell(1);
+
+        nameCell.textContent = newName;
+        actionCell.innerHTML = '<button onclick="removeRow(this)">Remover</button>';
+        
+        document.getElementById("new-name").value = '';
+    } else {
+        alert("Por favor, digite um nome.");
+    }
+}
+
+function removeRow(button) {
+    var row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+}
+</script>
+{% endblock %}
